@@ -1,0 +1,32 @@
+<h1>Shipment Information</h1>
+<h2>Carrier Information</h2>
+<dl>
+    <td>Carrier Name:</td>
+    <dd>{{cName}}</dd>
+    <td>Truck Type:</td>
+    <dd>{{cTruck}}</dd>
+    <td>Shipment Type:</td>
+    <dd>{{cTShipment}}</dd>
+</dl>
+
+<h2>Shipper Information</h2>
+<dl>
+    <td>Shipper Name:</td>
+    <dd>{{sName}}</dd>
+    <td>Load Type:</td>
+    <dd>{{sLoad}}</dd>
+    <td>Load Quantity:</td>
+    <dd>{{sPallets}}</dd>
+</dl>
+
+<h2>Broker Information</h2>
+<dl>
+    <td>Broker Name:</td>
+    <dd>{{bName}}</dd>
+    <td>Phoner Broker:</td>
+    <dd>{{bPhone}}</dd>
+    <td>Broker Email:</td>
+    <dd>{{bEmail}}</dd>
+</dl>
+
+<button (click)="changeCInfo()">Get New</button>

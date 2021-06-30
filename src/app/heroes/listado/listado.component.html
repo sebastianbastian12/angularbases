@@ -1,0 +1,52 @@
+<p>Listado De Ciudades</p>
+
+<div *ngIf="ciudadBorrada; else noBorrado">
+    <!-- c *ngIf nos ayuda a definir n valor
+booleano de una condicion si esta es falsa ocurre algo en este caso no se
+mostrara "ciudad borrada", pero si es verdadero si se mostrara-->
+    <h3>Ciudad Borrada: <small>{{ciudadBorrada}}</small></h3>
+
+</div>
+
+<ng-template #noBorrado>
+    <!--"#noBorrado" es una referencia local que ayuda
+a identificar si la condicion de "*ngIf" se cumple si no se activara la referencia
+local que est ahi para mostrar el templete-->
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<button (click)="borrarCiudad()">
+Borrar Ciudad
+</button>
+
+<ul>
+    <li *ngFor='let ciudades of cities; let i = index'>
+        <!-- "let ciudades" es una variable que llamamos,luego "of"
+hace referencia a la variable declarada en listado.components que en este
+caso es "cities" *ngFor se aplicara
+  para duplicar valores-->
+        {{i + 1}} - {{ciudades}}
+    </li>
+</ul>
+
+<!--------------------------------------------------------------------->
+
+<p>Listado de Lenguages de programacion</p>
+
+<div *ngIf="lenguageBorrado; else escepcion">
+    <h3>Lenguage Borrado: <small>{{lenguageBorrado}}</small></h3>
+</div>
+
+<ng-template #escepcion>
+    <h3>Ninguna modificacion</h3>
+</ng-template>
+
+<ul>
+    <li *ngFor='let programacion of lenguages ; let w = index'>
+        {{w + 1}} - {{programacion}}
+    </li>
+</ul>
+
+<button (click)="borrarLenguage()">
+  Borrando lenguage.....
+</button>
